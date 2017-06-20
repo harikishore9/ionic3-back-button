@@ -14,5 +14,13 @@
 
 
 <ion-content padding>
-
+<ion-list>
+    <h1>Deep Navigation Test</h1>
+    <ion-list-header>Follow us on</ion-list-header>
+    <ion-item [navPush]="'ContactFacebookPage'">Facebook</ion-item>
+      <ion-item [navPush]="'ContactLinkedinPage'">Linked In</ion-item>
+      <ion-item [navPush]="'ContactGplusPage'">Google Plus</ion-item>
+      <ion-item (click)="showMail()">E-Mail</ion-item>
+      
+  </ion-list>
 </ion-content>
