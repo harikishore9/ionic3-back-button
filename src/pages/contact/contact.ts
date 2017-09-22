@@ -13,7 +13,8 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
   templateUrl: 'contact.html',
 })
 export class ContactPage {
-
+  searchBarInput: string = null;
+  shouldShowCancel: boolean = true;
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
@@ -25,4 +26,18 @@ export class ContactPage {
     let modalCtrl = this.modalCtrl.create("ContactMailPage");
     modalCtrl.present();
   }
+
+  onInput(event) {
+    console.error("Fired onInput event");
+  }
+
+  onCancel(event) {
+    console.error("Fired onCancel event");
+  }
+
+  onClear(event) {
+    this.searchBarInput = "";
+    console.error("Fired onClear event");
+  }
+
 }

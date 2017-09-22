@@ -9,7 +9,15 @@
   <ion-navbar>
     <ion-title>Contact</ion-title>
   </ion-navbar>
-
+  <ion-toolbar>
+    <ion-searchbar
+    [(ngModel)]="searchBarInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionClear) = "onClear($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 
